@@ -26,4 +26,12 @@ public class Colaborador {
     @Enumerated(EnumType.STRING)
     private Humor  humor;
 
+    public Colaborador(DadosCadastroMedico dados) {
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.gestor = dados.gestor();
+        this.setor = dados.setor();
+        this.humor = dados.humor();
+
+    }
 }
